@@ -81,7 +81,7 @@ pydantic==1.10.8
     # via inflect
 pymssql==2.2.7 ; sys_platform == "win32"
     # via -r requirements/base.txt
-pymysql==1.1.0 ; sys_platform == "win32"
+pymysql==1.1.1 ; sys_platform == "win32"
     # via -r requirements/base.txt
 pyopenssl==23.2.0
     # via -r requirements/base.txt
