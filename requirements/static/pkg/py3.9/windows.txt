@@ -122,7 +122,7 @@ wmi==1.5.1 ; sys_platform == "win32"
     # via -r requirements/base.txt
 zc.lockfile==3.0.post1
     # via cherrypy
-zipp==3.16.2
+zipp==3.19.1
     # via importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
