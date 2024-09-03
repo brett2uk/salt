@@ -2875,7 +2875,7 @@ jobs:
           echo "SPB_ENVIRONMENT=$SPB_ENVIRONMENT" >> "$GITHUB_ENV"
 
       - name: Download Source Tarball
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: salt-${{ needs.prepare-workflow.outputs.salt-version }}.tar.gz
           path: artifacts/pkgs/incoming
@@ -3019,7 +3019,7 @@ jobs:
           echo "SPB_ENVIRONMENT=$SPB_ENVIRONMENT" >> "$GITHUB_ENV"
 
       - name: Download DEB Packages
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: salt-${{ needs.prepare-workflow.outputs.salt-version }}-${{ matrix.arch }}-deb
           path: artifacts/pkgs/incoming
@@ -3240,7 +3240,7 @@ jobs:
           echo "SPB_ENVIRONMENT=$SPB_ENVIRONMENT" >> "$GITHUB_ENV"
 
       - name: Download RPM Packages
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: salt-${{ needs.prepare-workflow.outputs.salt-version }}-${{ matrix.arch == 'arm64' && 'aarch64' || matrix.arch }}-rpm
           path: artifacts/pkgs/incoming
@@ -3330,25 +3330,25 @@ jobs:
           echo "SPB_ENVIRONMENT=$SPB_ENVIRONMENT" >> "$GITHUB_ENV"
 
       - name: Download Windows NSIS x86 Packages
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: salt-${{ needs.prepare-workflow.outputs.salt-version }}-x86-NSIS
           path: artifacts/pkgs/incoming
 
       - name: Download Windows MSI x86 Packages
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: salt-${{ needs.prepare-workflow.outputs.salt-version }}-x86-MSI
           path: artifacts/pkgs/incoming
 
       - name: Download Windows NSIS amd64 Packages
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: salt-${{ needs.prepare-workflow.outputs.salt-version }}-amd64-NSIS
           path: artifacts/pkgs/incoming
 
       - name: Download Windows MSI amd64 Packages
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: salt-${{ needs.prepare-workflow.outputs.salt-version }}-amd64-MSI
           path: artifacts/pkgs/incoming
@@ -3432,13 +3432,13 @@ jobs:
           echo "SPB_ENVIRONMENT=$SPB_ENVIRONMENT" >> "$GITHUB_ENV"
 
       - name: Download macOS x86_64 Packages
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: salt-${{ needs.prepare-workflow.outputs.salt-version }}-x86_64-macos
           path: artifacts/pkgs/incoming
 
       - name: Download macOS Arch64 Packages
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: salt-${{ needs.prepare-workflow.outputs.salt-version }}-aarch64-macos
           path: artifacts/pkgs/incoming
@@ -3524,49 +3524,49 @@ jobs:
           echo "SPB_ENVIRONMENT=$SPB_ENVIRONMENT" >> "$GITHUB_ENV"
 
       - name: Download Linux x86_64 Onedir Archive
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: salt-${{ needs.prepare-workflow.outputs.salt-version }}-onedir-linux-x86_64.tar.xz
           path: artifacts/pkgs/incoming
 
       - name: Download Linux aarch64 Onedir Archive
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: salt-${{ needs.prepare-workflow.outputs.salt-version }}-onedir-linux-aarch64.tar.xz
           path: artifacts/pkgs/incoming
 
       - name: Download macOS x86_64 Onedir Archive
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: salt-${{ needs.prepare-workflow.outputs.salt-version }}-onedir-darwin-x86_64.tar.xz
           path: artifacts/pkgs/incoming
 
       - name: Download macOS arm64 Onedir Archive
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: salt-${{ needs.prepare-workflow.outputs.salt-version }}-onedir-darwin-aarch64.tar.xz
           path: artifacts/pkgs/incoming
 
       - name: Download Windows amd64 Onedir Archive
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: salt-${{ needs.prepare-workflow.outputs.salt-version }}-onedir-windows-amd64.tar.xz
           path: artifacts/pkgs/incoming
 
       - name: Download Windows amd64 Onedir Archive(zip)
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: salt-${{ needs.prepare-workflow.outputs.salt-version }}-onedir-windows-amd64.zip
           path: artifacts/pkgs/incoming
 
       - name: Download Windows x86 Onedir Archive
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: salt-${{ needs.prepare-workflow.outputs.salt-version }}-onedir-windows-x86.tar.xz
           path: artifacts/pkgs/incoming
 
       - name: Download Windows amd64 Onedir Archive(zip)
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: salt-${{ needs.prepare-workflow.outputs.salt-version }}-onedir-windows-x86.zip
           path: artifacts/pkgs/incoming
@@ -3651,7 +3651,7 @@ jobs:
           cache-prefix: ${{ needs.prepare-workflow.outputs.cache-seed }}
 
       - name: Download Repository Artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: salt-${{ needs.prepare-workflow.outputs.salt-version }}-staging-repo
           path: repo/
@@ -3698,25 +3698,25 @@ jobs:
           cache-prefix: ${{ needs.prepare-workflow.outputs.cache-seed }}
 
       - name: Download Release Patch
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: salt-${{ needs.prepare-workflow.outputs.salt-version }}.patch
           path: artifacts/release
 
       - name: Download Source Repository
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: salt-${{ needs.prepare-workflow.outputs.salt-version }}-staging-src-repo
           path: artifacts/release
 
       - name: Download Release Documentation (HTML)
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: salt-${{ needs.prepare-workflow.outputs.salt-version }}-docs-html.tar.xz
           path: artifacts/release
 
       - name: Download Release Documentation (ePub)
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: Salt-${{ needs.prepare-workflow.outputs.salt-version }}.epub
           path: artifacts/release
@@ -3949,7 +3949,7 @@ jobs:
           echo "twine-password=$TWINE_PASSWORD" >> "${GITHUB_OUTPUT}"
 
       - name: Download PyPi Artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: pypi-artifacts
           path: artifacts/release

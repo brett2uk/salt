@@ -55,14 +55,14 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Download Onedir Tarball as an Artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: salt-${{ inputs.salt-version }}-onedir-linux-${{ matrix.arch }}.tar.xz
           path: artifacts/
 
       - name: Download Release Patch
         if: ${{ startsWith(github.event.ref, 'refs/tags') == false }}
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: salt-${{ inputs.salt-version }}.patch
 
